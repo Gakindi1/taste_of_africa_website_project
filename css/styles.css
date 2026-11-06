@@ -602,7 +602,7 @@ mark {
 }
 
 .ticker-track li::after {
-  content: "✦";
+  content: "\00B7";
   font-style: normal;
   font-size: 0.9rem;
   color: var(--accent);
@@ -722,6 +722,10 @@ mark {
   border-top: 1px solid var(--border);
   font-size: 0.82rem;
   color: var(--text-faint);
+}
+.card-meta span + span::before {
+  content: "\00B7";
+  margin-right: var(--space-4);
 }
 
 .dish-card figcaption {

@@ -210,7 +210,7 @@ function initRecipeFilter() {
       if (msg) {
         msg.textContent =
           activeFilter === "favorites" && query === ""
-            ? "You haven't saved any favourites yet. Tap ❤ on a dish to keep it here."
+            ? "You haven't saved any favourites yet. Use the Favorite button on any dish to save it here."
             : "No dishes match your search. Try another region or keyword.";
       }
     }
@@ -407,7 +407,7 @@ function initNewsletter() {
       msg.classList.toggle("is-success", valid);
       msg.classList.toggle("is-error", !valid);
       msg.textContent = valid
-        ? "🎉 You're in! Fresh recipes will land in your inbox every month."
+        ? "You're in! Fresh recipes will land in your inbox every month."
         : "Please enter a valid email address.";
 
       if (valid) form.reset();
