@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover the rich, diverse flavours of African cuisine: recipes, regions and the stories behind them.">
+  <meta name="theme-color" content="#0b0b0c">
+  <title>Home — A Culinary Journey Across Africa | Taste of Africa</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none' stroke='%23f0b65a' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect width='32' height='32' rx='7' fill='%230b0b0c' stroke='none'/%3E%3Cpath d='M11 4c-1.2 1.2 1.2 2.4 0 3.6M16 3c-1.2 1.2 1.2 2.4 0 3.6M21 4c-1.2 1.2 1.2 2.4 0 3.6M4.5 12.5h23M6.5 12.5v3.5a9.5 9.5 0 0 0 19 0v-3.5M10.5 19l1.9 2 1.9-2 1.9 2 1.9-2 1.9 2 1.9-2'/%3E%3C/svg%3E">
+
+  <!-- Google Fonts: Fraunces (expressive headings) + Inter (clean body text) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,800;1,9..144,500&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Apply the saved colour theme before the page paints (prevents a flash) -->
+  <script>
+    try {
+      var savedTheme = JSON.parse(localStorage.getItem("toa-theme"));
+      document.documentElement.setAttribute("data-theme", savedTheme === "light" ? "light" : "dark");
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ===== Site header & navigation ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Taste of Africa — home">
+        <svg class="logo-mark" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 3.5c-1.2 1.2 1.2 2.4 0 3.6M16 2.5c-1.2 1.2 1.2 2.4 0 3.6M21 3.5c-1.2 1.2 1.2 2.4 0 3.6"/><path d="M4.5 12.5h23"/><path d="M6.5 12.5v3.5a9.5 9.5 0 0 0 19 0v-3.5"/><path d="M10.5 19l1.9 2 1.9-2 1.9 2 1.9-2 1.9 2 1.9-2"/><path d="M6.5 15H3.5M25.5 15h3"/></svg>
+        <span>Taste <em>of</em> Africa</span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="recipes.html">Recipes</a></li>
+          <li><a href="regions.html">Regions</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="recipes.html?filter=favorites" class="icon-btn" aria-label="View your favourite recipes" title="Your favourites">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+          <span class="fav-badge" data-count="0"></span>
+        </a>
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch to light mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v2.5M12 20v2.5M4.6 4.6l1.8 1.8M17.6 17.6l1.8 1.8M1.5 12H4M20 12h2.5M4.6 19.4l1.8-1.8M17.6 6.4l1.8-1.8"/></svg>
+        </button>
+        <button class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ===== Hero ===== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="reveal">
+          <span class="eyebrow">A culinary journey across 54 nations</span>
+          <h1 id="hero-title">Taste the <span class="text-gradient">soul</span> of Africa.</h1>
+          <p class="hero-lead">From smoky West African jollof to fragrant Moroccan tagines and tangy Ethiopian injera — explore the recipes, spices and stories that make African cuisine one of the most vibrant on earth.</p>
+          <div class="hero-actions">
+            <a href="recipes.html" class="btn btn-primary">Explore recipes <span aria-hidden="true">→</span></a>
+            <a href="regions.html" class="btn btn-ghost">Discover regions</a>
+          </div>
+          <ul class="hero-stats">
+            <li><strong>54</strong><span>Countries</span></li>
+            <li><strong>13</strong><span>Signature dishes</span></li>
+            <li><strong>3</strong><span>Region guides</span></li>
+          </ul>
+        </div>
+        <figure class="video-card reveal">
+          <div class="video-frame">
+            <iframe src="https://www.youtube-nocookie.com/embed/ptCJtJSwBqs" title="These 10 foods came from Africa — Where Food Began" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <figcaption>▶ Watch: the everyday foods that began their journey in Africa.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== Spice ticker ===== -->
+    <section class="ticker" aria-label="Signature African spices">
+      <ul class="ticker-track">
+          <li>Berbere</li>
+          <li>Suya spice</li>
+          <li>Ras el hanout</li>
+          <li>Scotch bonnet</li>
+          <li>Saffron</li>
+          <li>Harissa</li>
+          <li>Grains of paradise</li>
+          <li>Cardamom</li>
+          <li>Peri-peri</li>
+          <li>Niter kibbeh</li>
+          <li>Dawadawa</li>
+          <li>Cloves of Zanzibar</li>
+          <li aria-hidden="true">Berbere</li>
+          <li aria-hidden="true">Suya spice</li>
+          <li aria-hidden="true">Ras el hanout</li>
+          <li aria-hidden="true">Scotch bonnet</li>
+          <li aria-hidden="true">Saffron</li>
+          <li aria-hidden="true">Harissa</li>
+          <li aria-hidden="true">Grains of paradise</li>
+          <li aria-hidden="true">Cardamom</li>
+          <li aria-hidden="true">Peri-peri</li>
+          <li aria-hidden="true">Niter kibbeh</li>
+          <li aria-hidden="true">Dawadawa</li>
+          <li aria-hidden="true">Cloves of Zanzibar</li>
+      </ul>
+    </section>
+
+    <!-- ===== Featured dishes ===== -->
+    <section class="section" aria-labelledby="featured-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Chef's selection</span>
+            <h2 id="featured-title">Featured dishes</h2>
+            <p>Four signature plates that capture the spirit of their regions — from <mark>scotch bonnet</mark> heat to the floral warmth of <mark>saffron</mark>.</p>
+          </div>
+          <a href="recipes.html" class="link-arrow">All recipes <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="grid grid-4 reveal">
+          <figure class="card dish-card">
+            <div class="card-media">
+              <img src="images/jollof-rice.jpg" alt="Jollof rice served with fresh tomatoes and fried plantain" loading="lazy">
+              <span class="chip">West Africa</span>
+            </div>
+            <figcaption>
+              <h3><a class="card-link" href="jollof-rice.html">Jollof Rice</a></h3>
+              <p>Smoky, tomato-rich rice cooked in one pot — the undisputed star of every West African celebration.</p>
+              <div class="card-actions">
+                <span class="link-arrow">View recipe <span aria-hidden="true">→</span></span>
+                <button class="fav-btn" type="button" data-id="jollof-rice" aria-pressed="false" aria-label="Save Jollof Rice to favorites"><span class="heart" aria-hidden="true">❤</span><span class="fav-label">Favorite</span></button>
+              </div>
+            </figcaption>
+          </figure>
+          <figure class="card dish-card">
+            <div class="card-media">
+              <img src="images/tagine.jpg" alt="Chicken tagine with preserved lemons and green olives" loading="lazy">
+              <span class="chip">North Africa</span>
+            </div>
+            <figcaption>
+              <h3><a class="card-link" href="tagine.html">Chicken Tagine</a></h3>
+              <p>Chicken slow-braised with saffron, preserved lemons and olives in a conical clay pot.</p>
+              <div class="card-actions">
+                <span class="link-arrow">View recipe <span aria-hidden="true">→</span></span>
+                <button class="fav-btn" type="button" data-id="tagine" aria-pressed="false" aria-label="Save Chicken Tagine to favorites"><span class="heart" aria-hidden="true">❤</span><span class="fav-label">Favorite</span></button>
+              </div>
+            </figcaption>
+          </figure>
+          <figure class="card dish-card">
+            <div class="card-media">
+              <img src="images/injera.jpg" alt="Injera on a woven basket topped with colourful Ethiopian stews" loading="lazy">
+              <span class="chip">East Africa</span>
+            </div>
+            <figcaption>
+              <h3><a class="card-link" href="injera.html">Injera</a></h3>
+              <p>A tangy, spongy teff flatbread that is both plate and cutlery for Ethiopian stews.</p>
+              <div class="card-actions">
+                <span class="link-arrow">View recipe <span aria-hidden="true">→</span></span>
+                <button class="fav-btn" type="button" data-id="injera" aria-pressed="false" aria-label="Save Injera to favorites"><span class="heart" aria-hidden="true">❤</span><span class="fav-label">Favorite</span></button>
+              </div>
+            </figcaption>
+          </figure>
+          <figure class="card dish-card">
+            <div class="card-media">
+              <img src="images/bunny-chow.jpg" alt="A Durban mutton bunny chow topped with fresh coriander" loading="lazy">
+              <span class="chip">Southern Africa</span>
+            </div>
+            <figcaption>
+              <h3><a class="card-link" href="bunny-chow.html">Bunny Chow</a></h3>
+              <p>Durban&#x27;s iconic street food: a hollowed loaf of bread filled with fiery lamb curry.</p>
+              <div class="card-actions">
+                <span class="link-arrow">View recipe <span aria-hidden="true">→</span></span>
+                <button class="fav-btn" type="button" data-id="bunny-chow" aria-pressed="false" aria-label="Save Bunny Chow to favorites"><span class="heart" aria-hidden="true">❤</span><span class="fav-label">Favorite</span></button>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Explore by region ===== -->
+    <section class="section section-alt" aria-labelledby="regions-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Explore by region</span>
+            <h2 id="regions-title">Three regions, endless flavour</h2>
+            <p>Every corner of the continent has its own staples, spices and cooking traditions. Where will you start?</p>
+          </div>
+          <a href="regions.html" class="link-arrow">All regions <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="grid grid-3 reveal">
+          <a class="region-card" href="west-africa.html">
+            <img src="images/west-africa-hero.jpg" alt="A bowl of Senegalese chicken yassa from West Africa" loading="lazy">
+            <div class="region-card-body">
+              <span class="eyebrow">Nigeria · Ghana · Senegal</span>
+              <h3>West Africa</h3>
+              <p>Bold one-pot rice, pounded swallows and fiery grills.</p>
+              <span class="link-arrow">Explore region <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
+          <a class="region-card" href="north-africa.html">
+            <img src="images/north-africa-hero.jpg" alt="Colourful pyramids of spices at a North African market" loading="lazy">
+            <div class="region-card-body">
+              <span class="eyebrow">Morocco · Tunisia · Egypt</span>
+              <h3>North Africa</h3>
+              <p>Aromatic tagines, steamed couscous and sweet–savoury spice.</p>
+              <span class="link-arrow">Explore region <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
+          <a class="region-card" href="east-africa.html">
+            <img src="images/east-africa-hero.jpg" alt="An Ethiopian platter of stews served on injera" loading="lazy">
+            <div class="region-card-body">
+              <span class="eyebrow">Ethiopia · Kenya · Rwanda</span>
+              <h3>East Africa</h3>
+              <p>Fermented injera, berbere-spiced stews and fire-roasted meat.</p>
+              <span class="link-arrow">Explore region <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Latest food trends ===== -->
+    <section class="section" aria-labelledby="trends-title">
+      <div class="container split">
+        <div class="reveal">
+          <span class="eyebrow">Latest food trends</span>
+          <h2 id="trends-title">What's cooking right now</h2>
+          <p class="muted">African ingredients and techniques are inspiring chefs and home cooks around the world. Here's what we're watching this season.</p>
+          <a href="recipes.html" class="btn btn-ghost mt-6">Cook something new</a>
+        </div>
+        <div class="trends-layout reveal">
+          <article class="trend-card">
+            <img src="images/injera.jpg" alt="Injera made from teff flour" loading="lazy">
+            <div>
+              <time datetime="2026-10-28">Oct 28, 2026</time>
+              <h3>Teff goes global</h3>
+              <p><mark>Teff</mark>, the tiny gluten-free grain behind injera, is appearing in bakeries and health-food aisles worldwide thanks to its iron and fibre.</p>
+            </div>
+          </article>
+          <article class="trend-card">
+            <img src="images/suya.jpg" alt="Suya skewers coated in yaji spice" loading="lazy">
+            <div>
+              <time datetime="2026-10-14">Oct 14, 2026</time>
+              <h3>Street-food spice blends come home</h3>
+              <p>Ready-made <mark>suya spice</mark>, <mark>berbere</mark> and <mark>harissa</mark> are becoming pantry staples for cooks chasing bold flavour.</p>
+            </div>
+          </article>
+          <article class="trend-card">
+            <img src="images/isombe.jpg" alt="Isombe, a cassava leaf stew" loading="lazy">
+            <div>
+              <time datetime="2026-09-30">Sep 30, 2026</time>
+              <h3>Plant-forward, the African way</h3>
+              <p>Dishes like isombe and misir wat show African cooking has always celebrated greens, legumes and <mark>ancestral grains</mark> like fonio.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer with newsletter signup ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <section>
+        <a href="index.html" class="logo"><svg class="logo-mark" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 3.5c-1.2 1.2 1.2 2.4 0 3.6M16 2.5c-1.2 1.2 1.2 2.4 0 3.6M21 3.5c-1.2 1.2 1.2 2.4 0 3.6"/><path d="M4.5 12.5h23"/><path d="M6.5 12.5v3.5a9.5 9.5 0 0 0 19 0v-3.5"/><path d="M10.5 19l1.9 2 1.9-2 1.9 2 1.9-2 1.9 2 1.9-2"/><path d="M6.5 15H3.5M25.5 15h3"/></svg><span>Taste <em>of</em> Africa</span></a>
+        <p class="mt-6">Celebrating the flavours, ingredients and stories behind Africa's rich culinary heritage — from Dakar to Durban.</p>
+      </section>
+      <nav aria-label="Footer: explore">
+        <h2>Explore</h2>
+        <ul class="footer-links">
+          <li><a href="recipes.html">All recipes</a></li>
+          <li><a href="regions.html">Culinary regions</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Footer: regions">
+        <h2>Regions</h2>
+        <ul class="footer-links">
+          <li><a href="west-africa.html">West Africa</a></li>
+          <li><a href="north-africa.html">North Africa</a></li>
+          <li><a href="east-africa.html">East Africa</a></li>
+          <li><a href="recipes.html?filter=southern-africa">Southern Africa</a></li>
+        </ul>
+      </nav>
+      <section aria-labelledby="newsletter-title">
+        <h2 id="newsletter-title">Newsletter</h2>
+        <p>One hand-picked recipe and a food story every month. No spam, ever.</p>
+        <form class="newsletter-form" novalidate>
+          <label for="newsletter-email" class="visually-hidden">Email address</label>
+          <input type="email" id="newsletter-email" name="newsletter-email" placeholder="you@example.com" autocomplete="email" required>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+        <p class="newsletter-msg" role="status" aria-live="polite"></p>
+      </section>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span class="current-year">2026</span> Taste of Africa. Made with love for African food heritage.</p>
+      <p>Photos used under Creative Commons licences — <a href="about.html#credits">see image credits</a>. Videos &copy; their creators.</p>
+    </div>
+  </footer>
+
+  <button class="icon-btn back-to-top" type="button" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

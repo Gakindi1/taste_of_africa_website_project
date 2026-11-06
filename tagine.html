@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="How to make authentic Chicken Tagine from Morocco: ingredients, step-by-step instructions and video.">
+  <meta name="theme-color" content="#0b0b0c">
+  <title>Chicken Tagine Recipe | Taste of Africa</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none' stroke='%23f0b65a' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect width='32' height='32' rx='7' fill='%230b0b0c' stroke='none'/%3E%3Cpath d='M11 4c-1.2 1.2 1.2 2.4 0 3.6M16 3c-1.2 1.2 1.2 2.4 0 3.6M21 4c-1.2 1.2 1.2 2.4 0 3.6M4.5 12.5h23M6.5 12.5v3.5a9.5 9.5 0 0 0 19 0v-3.5M10.5 19l1.9 2 1.9-2 1.9 2 1.9-2 1.9 2 1.9-2'/%3E%3C/svg%3E">
+
+  <!-- Google Fonts: Fraunces (expressive headings) + Inter (clean body text) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,800;1,9..144,500&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Apply the saved colour theme before the page paints (prevents a flash) -->
+  <script>
+    try {
+      var savedTheme = JSON.parse(localStorage.getItem("toa-theme"));
+      document.documentElement.setAttribute("data-theme", savedTheme === "light" ? "light" : "dark");
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ===== Site header & navigation ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Taste of Africa — home">
+        <svg class="logo-mark" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 3.5c-1.2 1.2 1.2 2.4 0 3.6M16 2.5c-1.2 1.2 1.2 2.4 0 3.6M21 3.5c-1.2 1.2 1.2 2.4 0 3.6"/><path d="M4.5 12.5h23"/><path d="M6.5 12.5v3.5a9.5 9.5 0 0 0 19 0v-3.5"/><path d="M10.5 19l1.9 2 1.9-2 1.9 2 1.9-2 1.9 2 1.9-2"/><path d="M6.5 15H3.5M25.5 15h3"/></svg>
+        <span>Taste <em>of</em> Africa</span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="recipes.html" aria-current="page">Recipes</a></li>
+          <li><a href="regions.html">Regions</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="recipes.html?filter=favorites" class="icon-btn" aria-label="View your favourite recipes" title="Your favourites">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+          <span class="fav-badge" data-count="0"></span>
+        </a>
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch to light mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v2.5M12 20v2.5M4.6 4.6l1.8 1.8M17.6 17.6l1.8 1.8M1.5 12H4M20 12h2.5M4.6 19.4l1.8-1.8M17.6 6.4l1.8-1.8"/></svg>
+        </button>
+        <button class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ===== Recipe header ===== -->
+    <section class="page-hero plain recipe-hero">
+      <div class="container recipe-hero-grid">
+        <div class="reveal">
+          <nav aria-label="Breadcrumb"><ol class="breadcrumb"><li><a href="index.html">Home</a></li><li><a href="recipes.html">Recipes</a></li><li aria-current="page">Chicken Tagine</li></ol></nav>
+          <span class="eyebrow">North Africa · Morocco</span>
+          <h1>Chicken Tagine</h1>
+          <p class="lead">Chicken slow-braised with saffron, preserved lemons and olives in Morocco&#x27;s iconic clay pot.</p>
+          <ul class="recipe-facts">
+            <li><span>Total time</span><strong>1 h 30 min</strong></li>
+            <li><span>Serves</span><strong>4</strong></li>
+            <li><span>Difficulty</span><strong>Medium</strong></li>
+          </ul>
+          <div class="card-actions">
+            <a href="#instructions" class="btn btn-primary">Start cooking <span aria-hidden="true">↓</span></a>
+            <button class="fav-btn" type="button" data-id="tagine" aria-pressed="false" aria-label="Save Chicken Tagine to favorites"><span class="heart" aria-hidden="true">❤</span><span class="fav-label">Favorite</span></button>
+          </div>
+        </div>
+        <div class="recipe-hero-img reveal">
+          <img src="images/tagine.jpg" alt="Chicken tagine with preserved lemons and green olives">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Ingredients + method ===== -->
+    <div class="section">
+      <div class="container recipe-layout">
+        <aside class="panel ingredients-panel" aria-labelledby="ingredients-title">
+          <h2 id="ingredients-title">Ingredients</h2>
+          <!-- Ingredient scaler: JavaScript multiplies every .qty by (servings / base servings) -->
+          <div class="scaler" data-base-servings="4">
+            <label for="servings">Servings</label>
+            <div class="scaler-controls">
+              <button type="button" data-step="-1" aria-label="Decrease servings">−</button>
+              <output id="servings" aria-live="polite">4</output>
+              <button type="button" data-step="1" aria-label="Increase servings">+</button>
+            </div>
+          </div>
+          <ul class="ingredients-list">
+              <li><span><span class="qty" data-base="8">8</span> bone-in chicken thighs</span></li>
+              <li><span><span class="qty" data-base="2">2</span> large onions, grated</span></li>
+              <li><span><span class="qty" data-base="4">4</span> garlic cloves, crushed</span></li>
+              <li><span><span class="qty" data-base="3">3</span> tbsp olive oil</span></li>
+              <li><span><span class="qty" data-base="1">1</span> tsp ground ginger</span></li>
+              <li><span><span class="qty" data-base="1">1</span> tsp ground turmeric</span></li>
+              <li><span><span class="qty" data-base="1">1</span> tsp ground cumin</span></li>
+              <li><span><span class="qty" data-base="1">1</span> tsp sweet paprika</span></li>
+              <li><span><span class="qty" data-base="1">1</span> cinnamon stick</span></li>
+              <li><span><span class="qty" data-base="1">1</span> large pinch saffron threads</span></li>
+              <li><span><span class="qty" data-base="2">2</span> preserved lemons, rind sliced</span></li>
+              <li><span><span class="qty" data-base="1">1</span> cup green olives</span></li>
+              <li><span><span class="qty" data-base="1">1</span> cup chicken stock</span></li>
+              <li><span><span class="qty" data-base="1">1</span> handful fresh coriander and parsley</span></li>
+              <li><span>Salt and black pepper, to taste</span></li>
+          </ul>
+        </aside>
+
+        <article class="recipe-main">
+          <section aria-labelledby="about-title">
+            <h2 id="about-title">About this dish</h2>
+            <p>A tagine is both a dish and the conical clay pot it's cooked in. The tall lid traps rising steam, which condenses and drips back down, gently braising meat and vegetables in their own juices with very little water — a clever technique developed by the Amazigh (Berber) people of North Africa.</p>
+            <p>This classic Moroccan version pairs chicken with tangy <mark>preserved lemons</mark>, green olives and a golden blend of <mark>ginger</mark>, <mark>turmeric</mark>, <mark>cumin</mark> and precious <mark>saffron</mark>. It's traditionally eaten straight from the pot, scooped up with pieces of fresh khobz bread.</p>
+            <p class="muted">Region: <a href="north-africa.html">North Africa</a></p>
+          </section>
+
+          <section id="instructions" class="steps" aria-labelledby="steps-title">
+            <h2 id="steps-title">Cooking instructions</h2>
+            <p class="muted">Tap each stage to expand or collapse the steps.</p>
+            <details open>
+              <summary><span class="step-num">01</span>Marinate the chicken</summary>
+              <ol>
+                <li>Soak the saffron in 2 tablespoons of warm water for 10 minutes.</li>
+                <li>Mix the garlic, olive oil, ginger, turmeric, cumin, paprika, salt and pepper into a paste.</li>
+                <li>Rub the paste all over the chicken and leave to marinate for at least 1 hour (or overnight).</li>
+              </ol>
+            </details>
+            <details>
+              <summary><span class="step-num">02</span>Brown and braise</summary>
+              <ol>
+                <li>Warm the tagine or a heavy casserole over medium heat and brown the chicken on both sides.</li>
+                <li>Add the grated onion, saffron water, cinnamon stick and stock, and stir gently.</li>
+                <li>Cover and simmer on low heat for 45 minutes, turning the chicken halfway.</li>
+              </ol>
+            </details>
+            <details>
+              <summary><span class="step-num">03</span>Finish with lemon and olives</summary>
+              <ol>
+                <li>Scatter the preserved lemon rind and olives around the chicken.</li>
+                <li>Cover and cook for a final 15 minutes until the sauce is thick and glossy.</li>
+                <li>Garnish with chopped herbs and serve with khobz bread or fluffy couscous.</li>
+              </ol>
+            </details>
+          </section>
+
+          <p class="tip"><strong>Chef's tip:</strong> Using a clay tagine on a gas or electric hob? Place a heat diffuser underneath and always heat it slowly to stop it cracking.</p>
+
+          <section aria-labelledby="nutrition-title">
+            <h2 id="nutrition-title">Nutrition facts</h2>
+            <div class="table-wrap">
+              <table>
+                <caption>Approximate values per serving (serves 4).</caption>
+                <thead>
+                  <tr><th scope="col">Nutrient</th><th scope="col">Amount</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Calories</td><td>480 kcal</td></tr>
+                  <tr><td>Carbohydrates</td><td>12 g</td></tr>
+                  <tr><td>Protein</td><td>38 g</td></tr>
+                  <tr><td>Fat</td><td>30 g</td></tr>
+                  <tr><td>Fibre</td><td>3 g</td></tr>
+                  <tr><td>Sodium</td><td>980 mg</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section aria-labelledby="video-title">
+            <h2 id="video-title">Watch the tutorial</h2>
+            <div class="video-frame">
+              <iframe src="https://www.youtube-nocookie.com/embed/R8fyTivC6lM" title="Moroccan Chicken Tagine — RecipeTin Eats" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+          </section>
+
+          <section aria-labelledby="origin-title">
+            <h2 id="origin-title">Where it comes from</h2>
+            <figure class="map-frame">
+              <iframe src="https://maps.google.com/maps?q=Marrakech,+Morocco&amp;z=6&amp;output=embed" title="Map of Morocco, home of the tagine" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+              <figcaption>📍 Chicken Tagine originates from Morocco.</figcaption>
+            </figure>
+          </section>
+        </article>
+      </div>
+    </div>
+
+    <!-- ===== More recipes ===== -->
+    <section class="section section-alt" aria-labelledby="more-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Keep cooking</span>
+            <h2 id="more-title">More recipes to try</h2>
+          </div>
+          <a href="recipes.html" class="link-arrow">All recipes <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="grid grid-3">
+          <article class="card recipe-card" data-region="west-africa" data-id="jollof-rice">
+            <div class="card-media">
+              <img src="images/jollof-rice.jpg" alt="Jollof rice served with fresh tomatoes and fried plantain" loading="lazy">
+              <span class="chip">West Africa</span>
+            </div>
+            <div class="card-body">
+              <h3><a class="card-link" href="jollof-rice.html">Jollof Rice</a></h3>
+              <p>Smoky, tomato-rich rice cooked in one pot — the undisputed star of every West African celebration.</p>
+              <div class="card-actions">
+                <span class="chip chip-accent">Full recipe</span>
+                <button class="fav-btn" type="button" data-id="jollof-rice" aria-pressed="false" aria-label="Save Jollof Rice to favorites"><span class="heart" aria-hidden="true">❤</span><span class="fav-label">Favorite</span></button>
+              </div>
+              <div class="card-meta"><span>📍 Nigeria</span><span>⏱ 1 h 15 min</span></div>
+            </div>
+          </article>
+          <article class="card recipe-card" data-region="east-africa" data-id="injera">
+            <div class="card-media">
+              <img src="images/injera.jpg" alt="Injera on a woven basket topped with colourful Ethiopian stews" loading="lazy">
+              <span class="chip">East Africa</span>
+            </div>
+            <div class="card-body">
+              <h3><a class="card-link" href="injera.html">Injera</a></h3>
+              <p>A tangy, spongy teff flatbread that is both plate and cutlery for Ethiopian stews.</p>
+              <div class="card-actions">
+                <span class="chip chip-accent">Full recipe</span>
+                <button class="fav-btn" type="button" data-id="injera" aria-pressed="false" aria-label="Save Injera to favorites"><span class="heart" aria-hidden="true">❤</span><span class="fav-label">Favorite</span></button>
+              </div>
+              <div class="card-meta"><span>📍 Ethiopia</span><span>⏱ 3 days + 30 min</span></div>
+            </div>
+          </article>
+          <article class="card recipe-card" data-region="southern-africa" data-id="bunny-chow">
+            <div class="card-media">
+              <img src="images/bunny-chow.jpg" alt="A Durban mutton bunny chow topped with fresh coriander" loading="lazy">
+              <span class="chip">Southern Africa</span>
+            </div>
+            <div class="card-body">
+              <h3><a class="card-link" href="bunny-chow.html">Bunny Chow</a></h3>
+              <p>Durban&#x27;s iconic street food: a hollowed loaf of bread filled with fiery lamb curry.</p>
+              <div class="card-actions">
+                <span class="chip chip-accent">Full recipe</span>
+                <button class="fav-btn" type="button" data-id="bunny-chow" aria-pressed="false" aria-label="Save Bunny Chow to favorites"><span class="heart" aria-hidden="true">❤</span><span class="fav-label">Favorite</span></button>
+              </div>
+              <div class="card-meta"><span>📍 South Africa</span><span>⏱ 2 h</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer with newsletter signup ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <section>
+        <a href="index.html" class="logo"><svg class="logo-mark" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 3.5c-1.2 1.2 1.2 2.4 0 3.6M16 2.5c-1.2 1.2 1.2 2.4 0 3.6M21 3.5c-1.2 1.2 1.2 2.4 0 3.6"/><path d="M4.5 12.5h23"/><path d="M6.5 12.5v3.5a9.5 9.5 0 0 0 19 0v-3.5"/><path d="M10.5 19l1.9 2 1.9-2 1.9 2 1.9-2 1.9 2 1.9-2"/><path d="M6.5 15H3.5M25.5 15h3"/></svg><span>Taste <em>of</em> Africa</span></a>
+        <p class="mt-6">Celebrating the flavours, ingredients and stories behind Africa's rich culinary heritage — from Dakar to Durban.</p>
+      </section>
+      <nav aria-label="Footer: explore">
+        <h2>Explore</h2>
+        <ul class="footer-links">
+          <li><a href="recipes.html">All recipes</a></li>
+          <li><a href="regions.html">Culinary regions</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Footer: regions">
+        <h2>Regions</h2>
+        <ul class="footer-links">
+          <li><a href="west-africa.html">West Africa</a></li>
+          <li><a href="north-africa.html">North Africa</a></li>
+          <li><a href="east-africa.html">East Africa</a></li>
+          <li><a href="recipes.html?filter=southern-africa">Southern Africa</a></li>
+        </ul>
+      </nav>
+      <section aria-labelledby="newsletter-title">
+        <h2 id="newsletter-title">Newsletter</h2>
+        <p>One hand-picked recipe and a food story every month. No spam, ever.</p>
+        <form class="newsletter-form" novalidate>
+          <label for="newsletter-email" class="visually-hidden">Email address</label>
+          <input type="email" id="newsletter-email" name="newsletter-email" placeholder="you@example.com" autocomplete="email" required>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+        <p class="newsletter-msg" role="status" aria-live="polite"></p>
+      </section>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span class="current-year">2026</span> Taste of Africa. Made with love for African food heritage.</p>
+      <p>Photos used under Creative Commons licences — <a href="about.html#credits">see image credits</a>. Videos &copy; their creators.</p>
+    </div>
+  </footer>
+
+  <button class="icon-btn back-to-top" type="button" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

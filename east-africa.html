@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover the food culture, staples, spices and cooking techniques of East Africa.">
+  <meta name="theme-color" content="#0b0b0c">
+  <title>East Africa Cuisine | Taste of Africa</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none' stroke='%23f0b65a' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect width='32' height='32' rx='7' fill='%230b0b0c' stroke='none'/%3E%3Cpath d='M11 4c-1.2 1.2 1.2 2.4 0 3.6M16 3c-1.2 1.2 1.2 2.4 0 3.6M21 4c-1.2 1.2 1.2 2.4 0 3.6M4.5 12.5h23M6.5 12.5v3.5a9.5 9.5 0 0 0 19 0v-3.5M10.5 19l1.9 2 1.9-2 1.9 2 1.9-2 1.9 2 1.9-2'/%3E%3C/svg%3E">
+
+  <!-- Google Fonts: Fraunces (expressive headings) + Inter (clean body text) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,800;1,9..144,500&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Apply the saved colour theme before the page paints (prevents a flash) -->
+  <script>
+    try {
+      var savedTheme = JSON.parse(localStorage.getItem("toa-theme"));
+      document.documentElement.setAttribute("data-theme", savedTheme === "light" ? "light" : "dark");
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ===== Site header & navigation ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Taste of Africa — home">
+        <svg class="logo-mark" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 3.5c-1.2 1.2 1.2 2.4 0 3.6M16 2.5c-1.2 1.2 1.2 2.4 0 3.6M21 3.5c-1.2 1.2 1.2 2.4 0 3.6"/><path d="M4.5 12.5h23"/><path d="M6.5 12.5v3.5a9.5 9.5 0 0 0 19 0v-3.5"/><path d="M10.5 19l1.9 2 1.9-2 1.9 2 1.9-2 1.9 2 1.9-2"/><path d="M6.5 15H3.5M25.5 15h3"/></svg>
+        <span>Taste <em>of</em> Africa</span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="recipes.html">Recipes</a></li>
+          <li><a href="regions.html" aria-current="page">Regions</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="recipes.html?filter=favorites" class="icon-btn" aria-label="View your favourite recipes" title="Your favourites">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+          <span class="fav-badge" data-count="0"></span>
+        </a>
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch to light mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v2.5M12 20v2.5M4.6 4.6l1.8 1.8M17.6 17.6l1.8 1.8M1.5 12H4M20 12h2.5M4.6 19.4l1.8-1.8M17.6 6.4l1.8-1.8"/></svg>
+        </button>
+        <button class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero" style="background-image: url('images/east-africa-hero.jpg');">
+      <div class="container reveal">
+        <nav aria-label="Breadcrumb"><ol class="breadcrumb"><li><a href="index.html">Home</a></li><li><a href="regions.html">Regions</a></li><li aria-current="page">East Africa</li></ol></nav>
+        <span class="eyebrow">Ethiopia · Eritrea · Kenya · Tanzania · Uganda · Rwanda</span>
+        <h1>East Africa</h1>
+        <p>From fermented injera in the highlands to spice-scented pilau on the Swahili coast.</p>
+      </div>
+    </section>
+
+    <!-- ===== Food culture ===== -->
+    <section class="section" aria-labelledby="culture-title">
+      <div class="container split">
+        <div class="region-intro reveal">
+          <span class="eyebrow">Food culture</span>
+          <h2 id="culture-title">The flavours of East Africa</h2>
+          <p>East Africa spans the Ethiopian highlands, the Great Rift Valley and the Swahili coast of the Indian Ocean. In Ethiopia and Eritrea, meals are served on <mark>injera</mark>, a spongy fermented flatbread, with stews spiced with <mark>berbere</mark>. Further south, maize-based ugali, roasted meats and green bananas (matoke) anchor the table.</p>
+          <p>Centuries of Indian Ocean trade brought <mark>cloves</mark>, <mark>cardamom</mark> and coconut to Zanzibar and Mombasa, giving coastal Swahili cooking dishes like pilau and biryani. Across the region, eating together from a shared platter is a sign of friendship.</p>
+        </div>
+        <figure class="card reveal">
+          <div class="card-media"><img src="images/berbere.jpg" alt="A pile of red berbere spice blend" loading="lazy"></div>
+          <figcaption class="card-body"><p class="mt-0">Berbere: the soul of Ethiopian cooking.</p></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== Staples & techniques ===== -->
+    <section class="section section-alt" aria-labelledby="staples-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">In the pantry</span>
+            <h2 id="staples-title">Staple ingredients</h2>
+          </div>
+        </div>
+        <ul class="staples reveal">
+          <li>Teff</li>
+          <li>Maize (ugali)</li>
+          <li>Matoke (green bananas)</li>
+          <li>Cassava &amp; cassava leaves</li>
+          <li>Sorghum</li>
+          <li>Lentils &amp; split peas</li>
+          <li>Beans</li>
+          <li>Coconut</li>
+          <li>Sweet potatoes</li>
+          <li>Sukuma wiki (collard greens)</li>
+        </ul>
+
+        <div class="section-head reveal mt-6" style="margin-top: var(--space-8);">
+          <div>
+            <span class="eyebrow">In the kitchen</span>
+            <h2>Cooking techniques</h2>
+          </div>
+        </div>
+        <ul class="feature-list reveal">
+          <li>
+            <h3>Fermentation</h3>
+            <p>Teff batter is <mark>fermented</mark> for days to give injera its tangy flavour and signature 'eyes'.</p>
+          </li>
+          <li>
+            <h3>Wat stews</h3>
+            <p>Onions are cooked down slowly before adding <mark>niter kibbeh</mark> spiced butter and berbere.</p>
+          </li>
+          <li>
+            <h3>Open-fire roasting</h3>
+            <p>Nyama choma — 'roasted meat' in Swahili — is grilled slowly over charcoal and shared at gatherings.</p>
+          </li>
+          <li>
+            <h3>Long simmering</h3>
+            <p>Pounded cassava leaves are simmered for hours into tender isombe, enriched with peanuts and palm oil.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Spices ===== -->
+    <section class="section" aria-labelledby="spices-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Signature flavours</span>
+            <h2 id="spices-title">Spices &amp; seasonings</h2>
+            <p>The aromatics that give East Africa its unmistakable taste.</p>
+          </div>
+        </div>
+        <div class="spice-grid reveal">
+          <article class="spice">
+            <h3><mark>Berbere</mark></h3>
+            <p>Ethiopia's brick-red blend of chilli, fenugreek, ginger, cardamom and more.</p>
+          </article>
+          <article class="spice">
+            <h3><mark>Mitmita</mark></h3>
+            <p>A fiery bird's-eye chilli blend served alongside kitfo.</p>
+          </article>
+          <article class="spice">
+            <h3><mark>Niter kibbeh</mark></h3>
+            <p>Clarified butter infused with spices — the base of countless stews.</p>
+          </article>
+          <article class="spice">
+            <h3><mark>Cloves</mark></h3>
+            <p>Zanzibar, the 'Spice Island', has long been famous for its cloves.</p>
+          </article>
+          <article class="spice">
+            <h3><mark>Cardamom</mark></h3>
+            <p>Perfumes Swahili pilau, chai and Ethiopian coffee ceremonies.</p>
+          </article>
+          <article class="spice">
+            <h3><mark>Pilau masala</mark></h3>
+            <p>Cumin, cardamom, cinnamon, pepper and cloves for coastal rice dishes.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Dishes ===== -->
+    <section class="section section-alt" aria-labelledby="dishes-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Example dishes</span>
+            <h2 id="dishes-title">Dishes to try</h2>
+            <p>Cards marked <strong>Full recipe</strong> link to step-by-step instructions.</p>
+          </div>
+          <a href="recipes.html?filter=east-africa" class="link-arrow">Filter East Africa recipes <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="grid grid-auto reveal">
+          <article class="card recipe-card" data-region="east-africa" data-id="injera">
+            <div class="card-media">
+              <img src="images/injera.jpg" alt="Injera on a woven basket topped with colourful Ethiopian stews" loading="lazy">
+              <span class="chip">East Africa</span>
+            </div>
+            <div class="card-body">
+              <h3><a class="card-link" href="injera.html">Injera</a></h3>
+              <p>A tangy, spongy teff flatbread that is both plate and cutlery for Ethiopian stews.</p>
+              <div class="card-actions">
+                <span class="chip chip-accent">Full recipe</span>
+                <button class="fav-btn" type="button" data-id="injera" aria-pressed="false" aria-label="Save Injera to favorites"><span class="heart" aria-hidden="true">❤</span><span class="fav-label">Favorite</span></button>
+              </div>
+              <div class="card-meta"><span>📍 Ethiopia</span><span>⏱ 3 days + 30 min</span></div>
+            </div>
+          </article>
+          <article class="card recipe-card" data-region="east-africa" data-id="isombe">
+            <div class="card-media">
+              <img src="images/isombe.jpg" alt="A bowl of dark green isombe cassava leaf stew" loading="lazy">
+              <span class="chip">East Africa</span>
+            </div>
+            <div class="card-body">
+              <h3><a class="card-link" href="isombe.html">Isombe</a></h3>
+              <p>Rwanda&#x27;s comforting stew of pounded cassava leaves, aubergine, peanuts and palm oil.</p>
+              <div class="card-actions">
+                <span class="chip chip-accent">Full recipe</span>
+                <button class="fav-btn" type="button" data-id="isombe" aria-pressed="false" aria-label="Save Isombe to favorites"><span class="heart" aria-hidden="true">❤</span><span class="fav-label">Favorite</span></button>
+              </div>
+              <div class="card-meta"><span>📍 Rwanda</span><span>⏱ 2 h 30 min</span></div>
+            </div>
+          </article>
+          <article class="card recipe-card" data-region="east-africa" data-id="ugali" id="dish-ugali">
+            <div class="card-media">
+              <img src="images/ugali.jpg" alt="Ugali with sukuma wiki, fried tilapia and kachumbari" loading="lazy">
+              <span class="chip">East Africa</span>
+            </div>
+            <div class="card-body">
+              <h3>Ugali &amp; Sukuma Wiki</h3>
+              <p>Firm maize-meal ugali served with garlicky sautéed collard greens — East Africa&#x27;s daily staple.</p>
+              <div class="card-actions">
+                <span class="chip">Regional dish</span>
+                <button class="fav-btn" type="button" data-id="ugali" aria-pressed="false" aria-label="Save Ugali &amp; Sukuma Wiki to favorites"><span class="heart" aria-hidden="true">❤</span><span class="fav-label">Favorite</span></button>
+              </div>
+              <div class="card-meta"><span>📍 Kenya</span><span>⏱ 30 min</span></div>
+            </div>
+          </article>
+          <article class="card recipe-card" data-region="east-africa" data-id="nyama-choma" id="dish-nyama-choma">
+            <div class="card-media">
+              <img src="images/nyama-choma.jpg" alt="Goat meat roasting slowly over a charcoal grill" loading="lazy">
+              <span class="chip">East Africa</span>
+            </div>
+            <div class="card-body">
+              <h3>Nyama Choma</h3>
+              <p>Goat or beef slow-roasted over charcoal — the centrepiece of East African gatherings.</p>
+              <div class="card-actions">
+                <span class="chip">Regional dish</span>
+                <button class="fav-btn" type="button" data-id="nyama-choma" aria-pressed="false" aria-label="Save Nyama Choma to favorites"><span class="heart" aria-hidden="true">❤</span><span class="fav-label">Favorite</span></button>
+              </div>
+              <div class="card-meta"><span>📍 Kenya</span><span>⏱ 1 h 30 min</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Video ===== -->
+    <section class="section" aria-labelledby="watch-title">
+      <div class="container split">
+        <div class="reveal">
+          <span class="eyebrow">Watch &amp; explore</span>
+          <h2 id="watch-title">A taste of East Africa</h2>
+          <p class="muted">Explore Nairobi's street food scene — nyama choma, ugali, chapati and more.</p>
+          <p class="muted">Continue your journey:</p>
+          <div class="hero-actions mt-0"><a href="west-africa.html" class="btn btn-ghost">West Africa <span aria-hidden="true">→</span></a> <a href="north-africa.html" class="btn btn-ghost">North Africa <span aria-hidden="true">→</span></a></div>
+        </div>
+        <div class="video-frame reveal">
+          <iframe src="https://www.youtube-nocookie.com/embed/mzHfHHF6aSU" title="Street Food in Kenya — Ultimate Kenyan Food Tour in Nairobi (Mark Wiens)" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer with newsletter signup ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <section>
+        <a href="index.html" class="logo"><svg class="logo-mark" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 3.5c-1.2 1.2 1.2 2.4 0 3.6M16 2.5c-1.2 1.2 1.2 2.4 0 3.6M21 3.5c-1.2 1.2 1.2 2.4 0 3.6"/><path d="M4.5 12.5h23"/><path d="M6.5 12.5v3.5a9.5 9.5 0 0 0 19 0v-3.5"/><path d="M10.5 19l1.9 2 1.9-2 1.9 2 1.9-2 1.9 2 1.9-2"/><path d="M6.5 15H3.5M25.5 15h3"/></svg><span>Taste <em>of</em> Africa</span></a>
+        <p class="mt-6">Celebrating the flavours, ingredients and stories behind Africa's rich culinary heritage — from Dakar to Durban.</p>
+      </section>
+      <nav aria-label="Footer: explore">
+        <h2>Explore</h2>
+        <ul class="footer-links">
+          <li><a href="recipes.html">All recipes</a></li>
+          <li><a href="regions.html">Culinary regions</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Footer: regions">
+        <h2>Regions</h2>
+        <ul class="footer-links">
+          <li><a href="west-africa.html">West Africa</a></li>
+          <li><a href="north-africa.html">North Africa</a></li>
+          <li><a href="east-africa.html">East Africa</a></li>
+          <li><a href="recipes.html?filter=southern-africa">Southern Africa</a></li>
+        </ul>
+      </nav>
+      <section aria-labelledby="newsletter-title">
+        <h2 id="newsletter-title">Newsletter</h2>
+        <p>One hand-picked recipe and a food story every month. No spam, ever.</p>
+        <form class="newsletter-form" novalidate>
+          <label for="newsletter-email" class="visually-hidden">Email address</label>
+          <input type="email" id="newsletter-email" name="newsletter-email" placeholder="you@example.com" autocomplete="email" required>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+        <p class="newsletter-msg" role="status" aria-live="polite"></p>
+      </section>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span class="current-year">2026</span> Taste of Africa. Made with love for African food heritage.</p>
+      <p>Photos used under Creative Commons licences — <a href="about.html#credits">see image credits</a>. Videos &copy; their creators.</p>
+    </div>
+  </footer>
+
+  <button class="icon-btn back-to-top" type="button" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

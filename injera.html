@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="How to make authentic Injera from Ethiopia: ingredients, step-by-step instructions and video.">
+  <meta name="theme-color" content="#0b0b0c">
+  <title>Injera Recipe | Taste of Africa</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none' stroke='%23f0b65a' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect width='32' height='32' rx='7' fill='%230b0b0c' stroke='none'/%3E%3Cpath d='M11 4c-1.2 1.2 1.2 2.4 0 3.6M16 3c-1.2 1.2 1.2 2.4 0 3.6M21 4c-1.2 1.2 1.2 2.4 0 3.6M4.5 12.5h23M6.5 12.5v3.5a9.5 9.5 0 0 0 19 0v-3.5M10.5 19l1.9 2 1.9-2 1.9 2 1.9-2 1.9 2 1.9-2'/%3E%3C/svg%3E">
+
+  <!-- Google Fonts: Fraunces (expressive headings) + Inter (clean body text) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,800;1,9..144,500&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Apply the saved colour theme before the page paints (prevents a flash) -->
+  <script>
+    try {
+      var savedTheme = JSON.parse(localStorage.getItem("toa-theme"));
+      document.documentElement.setAttribute("data-theme", savedTheme === "light" ? "light" : "dark");
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ===== Site header & navigation ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Taste of Africa — home">
+        <svg class="logo-mark" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 3.5c-1.2 1.2 1.2 2.4 0 3.6M16 2.5c-1.2 1.2 1.2 2.4 0 3.6M21 3.5c-1.2 1.2 1.2 2.4 0 3.6"/><path d="M4.5 12.5h23"/><path d="M6.5 12.5v3.5a9.5 9.5 0 0 0 19 0v-3.5"/><path d="M10.5 19l1.9 2 1.9-2 1.9 2 1.9-2 1.9 2 1.9-2"/><path d="M6.5 15H3.5M25.5 15h3"/></svg>
+        <span>Taste <em>of</em> Africa</span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="recipes.html" aria-current="page">Recipes</a></li>
+          <li><a href="regions.html">Regions</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="recipes.html?filter=favorites" class="icon-btn" aria-label="View your favourite recipes" title="Your favourites">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+          <span class="fav-badge" data-count="0"></span>
+        </a>
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch to light mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v2.5M12 20v2.5M4.6 4.6l1.8 1.8M17.6 17.6l1.8 1.8M1.5 12H4M20 12h2.5M4.6 19.4l1.8-1.8M17.6 6.4l1.8-1.8"/></svg>
+        </button>
+        <button class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ===== Recipe header ===== -->
+    <section class="page-hero plain recipe-hero">
+      <div class="container recipe-hero-grid">
+        <div class="reveal">
+          <nav aria-label="Breadcrumb"><ol class="breadcrumb"><li><a href="index.html">Home</a></li><li><a href="recipes.html">Recipes</a></li><li aria-current="page">Injera</li></ol></nav>
+          <span class="eyebrow">East Africa · Ethiopia</span>
+          <h1>Injera</h1>
+          <p class="lead">A tangy, spongy fermented flatbread that serves as plate, spoon and heart of every Ethiopian meal.</p>
+          <ul class="recipe-facts">
+            <li><span>Total time</span><strong>3 days + 30 min</strong></li>
+            <li><span>Serves</span><strong>6</strong></li>
+            <li><span>Difficulty</span><strong>Hard</strong></li>
+          </ul>
+          <div class="card-actions">
+            <a href="#instructions" class="btn btn-primary">Start cooking <span aria-hidden="true">↓</span></a>
+            <button class="fav-btn" type="button" data-id="injera" aria-pressed="false" aria-label="Save Injera to favorites"><span class="heart" aria-hidden="true">❤</span><span class="fav-label">Favorite</span></button>
+          </div>
+        </div>
+        <div class="recipe-hero-img reveal">
+          <img src="images/injera.jpg" alt="Injera on a woven basket topped with colourful Ethiopian stews">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Ingredients + method ===== -->
+    <div class="section">
+      <div class="container recipe-layout">
+        <aside class="panel ingredients-panel" aria-labelledby="ingredients-title">
+          <h2 id="ingredients-title">Ingredients</h2>
+          <!-- Ingredient scaler: JavaScript multiplies every .qty by (servings / base servings) -->
+          <div class="scaler" data-base-servings="6">
+            <label for="servings">Servings</label>
+            <div class="scaler-controls">
+              <button type="button" data-step="-1" aria-label="Decrease servings">−</button>
+              <output id="servings" aria-live="polite">6</output>
+              <button type="button" data-step="1" aria-label="Increase servings">+</button>
+            </div>
+          </div>
+          <ul class="ingredients-list">
+              <li><span><span class="qty" data-base="2">2</span> cups teff flour</span></li>
+              <li><span><span class="qty" data-base="3">3</span> cups lukewarm filtered water</span></li>
+              <li><span><span class="qty" data-base="0.5">½</span> tsp salt</span></li>
+              <li><span><span class="qty" data-base="0.25">¼</span> tsp active dry yeast (optional, speeds up fermentation)</span></li>
+              <li><span>A little oil, for the pan</span></li>
+          </ul>
+        </aside>
+
+        <article class="recipe-main">
+          <section aria-labelledby="about-title">
+            <h2 id="about-title">About this dish</h2>
+            <p>Injera is made from <mark>teff</mark>, a tiny, iron-rich, naturally gluten-free grain that has been grown in the Ethiopian and Eritrean highlands for thousands of years. The batter is left to ferment for several days, giving the bread its gentle sourness and the thousands of little holes — called 'eyes' — on its surface.</p>
+            <p>Injera is the plate, the spoon and the bread all at once. Colourful stews such as <mark>berbere</mark>-spiced doro wat (chicken) and misir wat (red lentils) are spooned on top, and diners tear off pieces to scoop them up. Feeding a friend a bite by hand, called <em>gursha</em>, is a gesture of love and respect.</p>
+            <p class="muted">Region: <a href="east-africa.html">East Africa</a></p>
+          </section>
+
+          <section id="instructions" class="steps" aria-labelledby="steps-title">
+            <h2 id="steps-title">Cooking instructions</h2>
+            <p class="muted">Tap each stage to expand or collapse the steps.</p>
+            <details open>
+              <summary><span class="step-num">01</span>Ferment the batter (2–3 days)</summary>
+              <ol>
+                <li>Whisk the teff flour (and yeast, if using) with 2½ cups of water into a smooth, thin batter.</li>
+                <li>Cover loosely with a clean cloth and leave at room temperature for 2–3 days.</li>
+                <li>It&#x27;s ready when it smells pleasantly sour and bubbles appear. Pour off any liquid that settles on top.</li>
+              </ol>
+            </details>
+            <details>
+              <summary><span class="step-num">02</span>Prepare to cook</summary>
+              <ol>
+                <li>Stir in the salt and enough of the remaining water to reach a thin pancake-batter consistency.</li>
+                <li>Leave for 30 minutes until bubbles form again on the surface.</li>
+              </ol>
+            </details>
+            <details>
+              <summary><span class="step-num">03</span>Cook the injera</summary>
+              <ol>
+                <li>Heat a large non-stick pan or traditional mitad over medium-high heat and wipe with a little oil.</li>
+                <li>Pour the batter in a thin spiral from the outside in, covering the whole pan.</li>
+                <li>When holes appear across the surface, cover with a lid for about 1 minute — do not flip!</li>
+                <li>The injera is done when the edges lift away. Slide it onto a clean cloth to cool before stacking.</li>
+              </ol>
+            </details>
+            <details>
+              <summary><span class="step-num">04</span>Serve</summary>
+              <ol>
+                <li>Line a large platter with injera and spoon stews such as doro wat, misir wat and shiro on top.</li>
+                <li>Roll extra injera on the side for scooping, and eat with your right hand.</li>
+              </ol>
+            </details>
+          </section>
+
+          <p class="tip"><strong>Chef's tip:</strong> Fermentation is faster in a warm kitchen. Use filtered water — chlorine in tap water can slow the natural yeasts.</p>
+
+          <section aria-labelledby="nutrition-title">
+            <h2 id="nutrition-title">Nutrition facts</h2>
+            <div class="table-wrap">
+              <table>
+                <caption>Approximate values per injera (makes about 8).</caption>
+                <thead>
+                  <tr><th scope="col">Nutrient</th><th scope="col">Amount</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Calories</td><td>180 kcal</td></tr>
+                  <tr><td>Carbohydrates</td><td>36 g</td></tr>
+                  <tr><td>Protein</td><td>6 g</td></tr>
+                  <tr><td>Fat</td><td>1 g</td></tr>
+                  <tr><td>Fibre</td><td>4 g</td></tr>
+                  <tr><td>Iron</td><td>3.8 mg</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section aria-labelledby="video-title">
+            <h2 id="video-title">Watch the tutorial</h2>
+            <div class="video-frame">
+              <iframe src="https://www.youtube-nocookie.com/embed/VLDlO2CIMbQ" title="How to Make Ethiopian Injera — Ferment Teff Flour (ZenDen)" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+          </section>
+
+          <section aria-labelledby="origin-title">
+            <h2 id="origin-title">Where it comes from</h2>
+            <figure class="map-frame">
+              <iframe src="https://maps.google.com/maps?q=Addis+Ababa,+Ethiopia&amp;z=5&amp;output=embed" title="Map of Ethiopia, home of injera" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+              <figcaption>📍 Injera originates from Ethiopia.</figcaption>
+            </figure>
+          </section>
+        </article>
+      </div>
+    </div>
+
+    <!-- ===== More recipes ===== -->
+    <section class="section section-alt" aria-labelledby="more-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Keep cooking</span>
+            <h2 id="more-title">More recipes to try</h2>
+          </div>
+          <a href="recipes.html" class="link-arrow">All recipes <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="grid grid-3">
+          <article class="card recipe-card" data-region="west-africa" data-id="jollof-rice">
+            <div class="card-media">
+              <img src="images/jollof-rice.jpg" alt="Jollof rice served with fresh tomatoes and fried plantain" loading="lazy">
+              <span class="chip">West Africa</span>
+            </div>
+            <div class="card-body">
+              <h3><a class="card-link" href="jollof-rice.html">Jollof Rice</a></h3>
+              <p>Smoky, tomato-rich rice cooked in one pot — the undisputed star of every West African celebration.</p>
+              <div class="card-actions">
+                <span class="chip chip-accent">Full recipe</span>
+                <button class="fav-btn" type="button" data-id="jollof-rice" aria-pressed="false" aria-label="Save Jollof Rice to favorites"><span class="heart" aria-hidden="true">❤</span><span class="fav-label">Favorite</span></button>
+              </div>
+              <div class="card-meta"><span>📍 Nigeria</span><span>⏱ 1 h 15 min</span></div>
+            </div>
+          </article>
+          <article class="card recipe-card" data-region="north-africa" data-id="tagine">
+            <div class="card-media">
+              <img src="images/tagine.jpg" alt="Chicken tagine with preserved lemons and green olives" loading="lazy">
+              <span class="chip">North Africa</span>
+            </div>
+            <div class="card-body">
+              <h3><a class="card-link" href="tagine.html">Chicken Tagine</a></h3>
+              <p>Chicken slow-braised with saffron, preserved lemons and olives in a conical clay pot.</p>
+              <div class="card-actions">
+                <span class="chip chip-accent">Full recipe</span>
+                <button class="fav-btn" type="button" data-id="tagine" aria-pressed="false" aria-label="Save Chicken Tagine to favorites"><span class="heart" aria-hidden="true">❤</span><span class="fav-label">Favorite</span></button>
+              </div>
+              <div class="card-meta"><span>📍 Morocco</span><span>⏱ 1 h 30 min</span></div>
+            </div>
+          </article>
+          <article class="card recipe-card" data-region="southern-africa" data-id="bunny-chow">
+            <div class="card-media">
+              <img src="images/bunny-chow.jpg" alt="A Durban mutton bunny chow topped with fresh coriander" loading="lazy">
+              <span class="chip">Southern Africa</span>
+            </div>
+            <div class="card-body">
+              <h3><a class="card-link" href="bunny-chow.html">Bunny Chow</a></h3>
+              <p>Durban&#x27;s iconic street food: a hollowed loaf of bread filled with fiery lamb curry.</p>
+              <div class="card-actions">
+                <span class="chip chip-accent">Full recipe</span>
+                <button class="fav-btn" type="button" data-id="bunny-chow" aria-pressed="false" aria-label="Save Bunny Chow to favorites"><span class="heart" aria-hidden="true">❤</span><span class="fav-label">Favorite</span></button>
+              </div>
+              <div class="card-meta"><span>📍 South Africa</span><span>⏱ 2 h</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer with newsletter signup ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <section>
+        <a href="index.html" class="logo"><svg class="logo-mark" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 3.5c-1.2 1.2 1.2 2.4 0 3.6M16 2.5c-1.2 1.2 1.2 2.4 0 3.6M21 3.5c-1.2 1.2 1.2 2.4 0 3.6"/><path d="M4.5 12.5h23"/><path d="M6.5 12.5v3.5a9.5 9.5 0 0 0 19 0v-3.5"/><path d="M10.5 19l1.9 2 1.9-2 1.9 2 1.9-2 1.9 2 1.9-2"/><path d="M6.5 15H3.5M25.5 15h3"/></svg><span>Taste <em>of</em> Africa</span></a>
+        <p class="mt-6">Celebrating the flavours, ingredients and stories behind Africa's rich culinary heritage — from Dakar to Durban.</p>
+      </section>
+      <nav aria-label="Footer: explore">
+        <h2>Explore</h2>
+        <ul class="footer-links">
+          <li><a href="recipes.html">All recipes</a></li>
+          <li><a href="regions.html">Culinary regions</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Footer: regions">
+        <h2>Regions</h2>
+        <ul class="footer-links">
+          <li><a href="west-africa.html">West Africa</a></li>
+          <li><a href="north-africa.html">North Africa</a></li>
+          <li><a href="east-africa.html">East Africa</a></li>
+          <li><a href="recipes.html?filter=southern-africa">Southern Africa</a></li>
+        </ul>
+      </nav>
+      <section aria-labelledby="newsletter-title">
+        <h2 id="newsletter-title">Newsletter</h2>
+        <p>One hand-picked recipe and a food story every month. No spam, ever.</p>
+        <form class="newsletter-form" novalidate>
+          <label for="newsletter-email" class="visually-hidden">Email address</label>
+          <input type="email" id="newsletter-email" name="newsletter-email" placeholder="you@example.com" autocomplete="email" required>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+        <p class="newsletter-msg" role="status" aria-live="polite"></p>
+      </section>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span class="current-year">2026</span> Taste of Africa. Made with love for African food heritage.</p>
+      <p>Photos used under Creative Commons licences — <a href="about.html#credits">see image credits</a>. Videos &copy; their creators.</p>
+    </div>
+  </footer>
+
+  <button class="icon-btn back-to-top" type="button" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
