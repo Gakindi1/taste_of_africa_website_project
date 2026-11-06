@@ -43,7 +43,7 @@
   --success: #4ade80;
   --error: #ff6b6b;
 
-  --gradient-accent: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+  --gradient-accent: var(--accent);
   --overlay: linear-gradient(180deg, rgba(11, 11, 12, 0.35) 0%, rgba(11, 11, 12, 0.85) 70%, var(--bg) 100%);
 
   /* Typography */
@@ -254,11 +254,10 @@ button { cursor: pointer; }
 .btn-primary {
   background: var(--gradient-accent);
   color: #1a1206;
-  box-shadow: 0 8px 24px rgba(240, 140, 80, 0.25);
 }
 .btn-primary:hover {
   color: #1a1206;
-  box-shadow: 0 12px 32px rgba(240, 140, 80, 0.4);
+  background: var(--accent-strong);
 }
 
 .btn-ghost {
@@ -309,7 +308,7 @@ button { cursor: pointer; }
 mark {
   padding: 0.05em 0.4em;
   border-radius: 0.35em;
-  background: linear-gradient(120deg, rgba(240, 182, 90, 0.22), rgba(255, 138, 92, 0.22));
+  background: rgba(240, 182, 90, 0.15);
   color: var(--accent-strong);
   font-weight: 600;
   box-decoration-break: clone;
@@ -319,10 +318,7 @@ mark {
 [data-theme="light"] mark { color: #8a5a06; }
 
 .text-gradient {
-  background: var(--gradient-accent);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--accent);
 }
 
 .muted { color: var(--text-muted); }
@@ -489,7 +485,6 @@ mark {
   inset: 0;
   z-index: -1;
   background:
-    radial-gradient(ellipse at 20% 30%, rgba(240, 182, 90, 0.18), transparent 55%),
     linear-gradient(90deg, rgba(11, 11, 12, 0.95) 0%, rgba(11, 11, 12, 0.8) 50%, rgba(11, 11, 12, 0.6) 100%),
     linear-gradient(180deg, transparent 70%, var(--bg) 100%);
 }
@@ -591,9 +586,6 @@ mark {
 }
 
 .page-hero.plain {
-  background-image:
-    radial-gradient(ellipse at 15% 0%, rgba(240, 182, 90, 0.16), transparent 50%),
-    radial-gradient(ellipse at 90% 100%, rgba(255, 138, 92, 0.12), transparent 50%);
   background-color: var(--bg-elev);
   color: var(--text);
   border-bottom: 1px solid var(--border);
@@ -1404,9 +1396,7 @@ thead th:last-child { text-align: right; }
   overflow: hidden;
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  background:
-    radial-gradient(ellipse at 0% 0%, rgba(240, 182, 90, 0.14), transparent 55%),
-    var(--surface);
+  background: var(--surface);
   text-align: center;
 }
 
