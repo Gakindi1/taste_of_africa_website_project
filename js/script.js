@@ -1,32 +1,10 @@
-/* ==========================================================================
-   Taste of Africa — Main Script
-   --------------------------------------------------------------------------
-   Features
-   1. Theme toggle (dark / light) saved in localStorage
-   2. Mobile navigation menu
-   3. Sticky header shadow + back-to-top button
-   4. Scroll-reveal animations (IntersectionObserver)
-   5. Favourites ("❤ Favorite") saved in localStorage
-   6. Interactive recipe filter + live search
-   7. Ingredient scaler (adjust servings)
-   8. Contact form validation & dynamic feedback
-   9. Newsletter signup (footer)
-   10. Footer year
-   ========================================================================== */
-
-// Tell CSS that JavaScript is running (enables reveal animations).
 document.documentElement.classList.add("js");
 
-// Keys used for localStorage.
 const STORAGE_KEYS = {
   theme: "toa-theme",
   favorites: "toa-favorites",
 };
 
-/* --------------------------------------------------------------------------
-   Small helper: safely read/write JSON in localStorage
-   (localStorage can throw in private browsing or when disabled).
-   -------------------------------------------------------------------------- */
 function readStorage(key, fallback) {
   try {
     const value = localStorage.getItem(key);
@@ -40,13 +18,9 @@ function writeStorage(key, value) {
   try {
     localStorage.setItem(key, JSON.stringify(value));
   } catch (error) {
-    /* Storage unavailable — the feature still works for this visit. */
   }
 }
 
-/* ==========================================================================
-   1. THEME TOGGLE
-   ========================================================================== */
 function initThemeToggle() {
   const toggle = document.getElementById("theme-toggle");
   if (!toggle) return;
@@ -58,7 +32,6 @@ function initThemeToggle() {
     toggle.setAttribute("title", `Switch to ${next} mode`);
   };
 
-  // Restore the saved theme (dark is the default look).
   applyTheme(readStorage(STORAGE_KEYS.theme, "dark"));
 
   toggle.addEventListener("click", () => {
@@ -69,9 +42,6 @@ function initThemeToggle() {
   });
 }
 
-/* ==========================================================================
-   2. MOBILE NAVIGATION
-   ========================================================================== */
 function initMobileNav() {
   const toggle = document.querySelector(".nav-toggle");
   const nav = document.querySelector(".main-nav");
@@ -87,7 +57,6 @@ function initMobileNav() {
     setOpen(toggle.getAttribute("aria-expanded") !== "true");
   });
 
-  // Close the menu after choosing a link or pressing Escape.
   nav.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => setOpen(false));
   });
@@ -97,9 +66,6 @@ function initMobileNav() {
   });
 }
 
-/* ==========================================================================
-   3. HEADER SHADOW + BACK-TO-TOP
-   ========================================================================== */
 function initScrollEffects() {
   const header = document.querySelector(".site-header");
   const backToTop = document.querySelector(".back-to-top");
@@ -120,13 +86,9 @@ function initScrollEffects() {
   }
 }
 
-/* ==========================================================================
-   4. SCROLL-REVEAL ANIMATIONS
-   ========================================================================== */
 function initReveal() {
   const items = document.querySelectorAll(".reveal");
 
-  // Fallback for very old browsers: just show everything.
   if (!("IntersectionObserver" in window)) {
     items.forEach((item) => item.classList.add("is-visible"));
     return;
@@ -137,7 +99,7 @@ function initReveal() {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target); // animate only once
+          observer.unobserve(entry.target);
         }
       });
     },
@@ -147,12 +109,8 @@ function initReveal() {
   items.forEach((item) => observer.observe(item));
 }
 
-/* ==========================================================================
-   5. FAVOURITES (localStorage)
-   ========================================================================== */
 let favorites = readStorage(STORAGE_KEYS.favorites, []);
 
-/** Update a single favourite button's look + accessible label. */
 function renderFavoriteButton(button) {
   const id = button.dataset.id;
   const isFav = favorites.includes(id);
@@ -163,7 +121,6 @@ function renderFavoriteButton(button) {
   if (label) label.textContent = isFav ? "Saved" : "Favorite";
 }
 
-/** Show the number of favourites in the header badge. */
 function updateFavoriteBadge() {
   document.querySelectorAll(".fav-badge").forEach((badge) => {
     badge.textContent = favorites.length;
@@ -183,24 +140,21 @@ function toggleFavorite(id) {
 function initFavorites() {
   const buttons = document.querySelectorAll(".fav-btn");
 
-  // On page load: restore saved favourites from localStorage.
   buttons.forEach((button) => {
     renderFavoriteButton(button);
 
     button.addEventListener("click", (event) => {
-      event.preventDefault();   // don't follow the card link
+      event.preventDefault();
       event.stopPropagation();
 
       toggleFavorite(button.dataset.id);
 
-      // Several buttons may share an ID (e.g. home + recipes page) — sync all.
       document
         .querySelectorAll(`.fav-btn[data-id="${button.dataset.id}"]`)
         .forEach(renderFavoriteButton);
 
       updateFavoriteBadge();
 
-      // If the "Favorites" filter is active, refresh the visible list.
       document.dispatchEvent(new CustomEvent("favorites:changed"));
     });
   });
@@ -208,9 +162,6 @@ function initFavorites() {
   updateFavoriteBadge();
 }
 
-/* ==========================================================================
-   6. RECIPE FILTER + SEARCH
-   ========================================================================== */
 function initRecipeFilter() {
   const filterButtons = document.querySelectorAll(".filter-btn");
   const cards = document.querySelectorAll(".recipe-card");
@@ -222,7 +173,6 @@ function initRecipeFilter() {
 
   let activeFilter = "all";
 
-  /** Loop through every card and show/hide it with the .hidden class. */
   function applyFilter() {
     const query = searchInput ? searchInput.value.trim().toLowerCase() : "";
     let visible = 0;
@@ -241,10 +191,9 @@ function initRecipeFilter() {
       const wasHidden = card.classList.contains("hidden");
       card.classList.toggle("hidden", !show);
 
-      // Replay the entrance animation for cards that just appeared.
       if (show && wasHidden) {
         card.classList.remove("is-entering");
-        void card.offsetWidth; // force reflow so the animation restarts
+        void card.offsetWidth;
         card.classList.add("is-entering");
       }
 
@@ -283,22 +232,15 @@ function initRecipeFilter() {
 
   if (searchInput) searchInput.addEventListener("input", applyFilter);
 
-  // Keep the favourites view up to date when a heart is toggled.
   document.addEventListener("favorites:changed", () => {
     if (activeFilter === "favorites") applyFilter();
   });
 
-  // Allow links such as recipes.html?filter=favorites or ?filter=west-africa
   const requested = new URLSearchParams(window.location.search).get("filter");
   const valid = [...filterButtons].some((btn) => btn.dataset.filter === requested);
   setActiveFilter(valid ? requested : "all");
 }
 
-/* ==========================================================================
-   7. INGREDIENT SCALER
-   ========================================================================== */
-
-/** Turn 1.5 into "1½", 0.25 into "¼", 2.3333 into "2⅓", etc. */
 function formatQuantity(value) {
   const fractions = [
     [0, ""], [0.125, "⅛"], [0.25, "¼"], [0.333, "⅓"], [0.5, "½"],
@@ -310,7 +252,6 @@ function formatQuantity(value) {
   let whole = Math.floor(value);
   const remainder = value - whole;
 
-  // Find the closest "kitchen friendly" fraction.
   let closest = fractions[0];
   for (const fraction of fractions) {
     if (Math.abs(fraction[0] - remainder) < Math.abs(closest[0] - remainder)) {
@@ -358,9 +299,6 @@ function initIngredientScaler() {
   render();
 }
 
-/* ==========================================================================
-   8. CONTACT FORM VALIDATION & FEEDBACK
-   ========================================================================== */
 function initContactForm() {
   const form = document.getElementById("contact-form");
   if (!form) return;
@@ -373,7 +311,6 @@ function initContactForm() {
   const successBox = document.getElementById("form-success");
   const MIN_MESSAGE_LENGTH = 20;
 
-  /** Show (or clear) an error message under a field. */
   function setError(input, message) {
     const field = input.closest(".field");
     const errorEl = field.querySelector(".error-message");
@@ -411,7 +348,6 @@ function initContactForm() {
     return ok;
   }
 
-  // Live character counter for the message.
   messageInput.addEventListener("input", () => {
     const length = messageInput.value.trim().length;
     charCount.textContent = `${length} / ${MIN_MESSAGE_LENGTH + 1}+ characters`;
@@ -419,24 +355,21 @@ function initContactForm() {
     if (messageInput.closest(".field").classList.contains("has-error")) validateMessage();
   });
 
-  // Re-validate a field when the user leaves it.
   nameInput.addEventListener("blur", validateName);
   emailInput.addEventListener("blur", validateEmail);
   countrySelect.addEventListener("change", validateCountry);
 
   form.addEventListener("submit", (event) => {
-    event.preventDefault(); // stop the browser from submitting/reloading
+    event.preventDefault();
 
     const results = [validateName(), validateEmail(), validateCountry(), validateMessage()];
 
     if (results.includes(false)) {
-      // Move focus to the first invalid field for keyboard/screen-reader users.
       const firstInvalid = form.querySelector('[aria-invalid="true"]');
       if (firstInvalid) firstInvalid.focus();
       return;
     }
 
-    // Success: hide the form and build a personalised thank-you message.
     const name = nameInput.value.trim();
     successBox.querySelector(".success-title").textContent =
       `Thank you, ${name}! We've received your message.`;
@@ -448,7 +381,6 @@ function initContactForm() {
     successBox.focus();
   });
 
-  // "Send another message" resets everything.
   const resetBtn = document.getElementById("send-another");
   if (resetBtn) {
     resetBtn.addEventListener("click", () => {
@@ -462,9 +394,6 @@ function initContactForm() {
   }
 }
 
-/* ==========================================================================
-   9. NEWSLETTER SIGNUP
-   ========================================================================== */
 function initNewsletter() {
   document.querySelectorAll(".newsletter-form").forEach((form) => {
     const input = form.querySelector("input[type='email']");
@@ -486,18 +415,12 @@ function initNewsletter() {
   });
 }
 
-/* ==========================================================================
-   10. FOOTER YEAR
-   ========================================================================== */
 function initYear() {
   document.querySelectorAll(".current-year").forEach((el) => {
     el.textContent = new Date().getFullYear();
   });
 }
 
-/* ==========================================================================
-   START EVERYTHING once the HTML has loaded
-   ========================================================================== */
 document.addEventListener("DOMContentLoaded", () => {
   initThemeToggle();
   initMobileNav();

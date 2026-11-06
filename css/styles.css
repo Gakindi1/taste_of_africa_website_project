@@ -1,30 +1,4 @@
-/* ==========================================================================
-   Taste of Africa — Main Stylesheet
-   --------------------------------------------------------------------------
-   Table of contents
-   1.  Design tokens (colours, fonts, spacing) + light theme
-   2.  Reset & base elements
-   3.  Layout helpers
-   4.  Buttons, chips & marks
-   5.  Header & navigation
-   6.  Hero sections
-   7.  Ingredient ticker
-   8.  Section headings
-   9.  Cards (dishes, regions, articles)
-   10. Recipe filter & favourites
-   11. Recipe detail page
-   12. Region pages
-   13. About page
-   14. Contact page & forms
-   15. Footer & newsletter
-   16. Utilities & animations
-   17. Responsive breakpoints
-   ========================================================================== */
-
-/* 1. DESIGN TOKENS ======================================================== */
 :root {
-  /* Palette — "midnight & saffron": premium blacks and greys,
-     warmed with spice-inspired accents (saffron, papaya, hibiscus). */
   --bg: #0b0b0c;
   --bg-elev: #111113;
   --surface: #17171a;
@@ -35,22 +9,20 @@
   --text-muted: #a1a1aa;
   --text-faint: #71717a;
 
-  --accent: #f0b65a;          /* saffron gold */
+  --accent: #f0b65a;
   --accent-strong: #f7c873;
-  --accent-2: #ff8a5c;        /* papaya / paprika */
-  --accent-ink: #1a1206;      /* text on accent backgrounds */
-  --heart: #ff4d6d;           /* hibiscus red for favourites */
+  --accent-2: #ff8a5c;
+  --accent-ink: #1a1206;
+  --heart: #ff4d6d;
   --success: #4ade80;
   --error: #ff6b6b;
 
   --gradient-accent: var(--accent);
   --overlay: linear-gradient(180deg, rgba(11, 11, 12, 0.35) 0%, rgba(11, 11, 12, 0.85) 70%, var(--bg) 100%);
 
-  /* Typography */
   --font-display: "Fraunces", Georgia, "Times New Roman", serif;
   --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 
-  /* Spacing scale (rem based for accessibility) */
   --space-1: 0.25rem;
   --space-2: 0.5rem;
   --space-3: 0.75rem;
@@ -61,7 +33,6 @@
   --space-8: 4.5rem;
   --space-9: 6rem;
 
-  /* Shape & depth */
   --radius-sm: 0.5rem;
   --radius: 1rem;
   --radius-lg: 1.5rem;
@@ -76,7 +47,6 @@
   color-scheme: dark;
 }
 
-/* Light theme — toggled by JavaScript via data-theme on <html> */
 [data-theme="light"] {
   --bg: #f7f5f1;
   --bg-elev: #ffffff;
@@ -98,7 +68,6 @@
   color-scheme: light;
 }
 
-/* 2. RESET & BASE ========================================================= */
 *,
 *::before,
 *::after {
@@ -106,7 +75,7 @@
 }
 
 html {
-  font-size: 100%;               /* 16px base — respects user settings */
+  font-size: 100%;
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--header-h) + 1rem);
 }
@@ -177,7 +146,6 @@ button { cursor: pointer; }
   color: var(--accent-ink);
 }
 
-/* Accessible "skip to content" link */
 .skip-link {
   position: absolute;
   left: 1rem;
@@ -191,7 +159,6 @@ button { cursor: pointer; }
 }
 .skip-link:focus { top: 1rem; }
 
-/* 3. LAYOUT HELPERS ======================================================= */
 .container {
   width: min(92%, 75rem);
   margin-inline: auto;
@@ -228,12 +195,10 @@ button { cursor: pointer; }
   align-items: center;
 }
 
-/* Columns of equal height (e.g. text + map on the About page) */
 .split-stretch { align-items: stretch; }
 .split-stretch .map-frame { display: flex; flex-direction: column; }
 .split-stretch .map-frame iframe { flex: 1; min-height: 24rem; }
 
-/* 4. BUTTONS, CHIPS & MARKS =============================================== */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -304,7 +269,6 @@ button { cursor: pointer; }
   color: var(--accent);
 }
 
-/* Custom <mark> — highlights spices, ingredients and techniques */
 mark {
   padding: 0.05em 0.4em;
   border-radius: 0.35em;
@@ -323,7 +287,6 @@ mark {
 
 .muted { color: var(--text-muted); }
 
-/* 5. HEADER & NAVIGATION ================================================== */
 .site-header {
   position: sticky;
   top: 0;
@@ -396,7 +359,6 @@ mark {
   transition: color 0.2s ease, background-color 0.2s ease;
 }
 
-/* Animated underline on hover */
 .nav-list a::after {
   content: "";
   position: absolute;
@@ -441,7 +403,6 @@ mark {
 }
 .icon-btn svg { width: 1.15rem; height: 1.15rem; }
 
-/* Sun / moon icons swap with the theme */
 .icon-sun { display: none; }
 [data-theme="light"] .icon-sun { display: block; }
 [data-theme="light"] .icon-moon { display: none; }
@@ -466,7 +427,6 @@ mark {
 
 .nav-toggle { display: none; }
 
-/* 6. HERO SECTIONS ======================================================== */
 .hero {
   position: relative;
   min-height: min(calc(100vh - var(--header-h)), 54rem);
@@ -532,7 +492,6 @@ mark {
   color: rgba(244, 241, 236, 0.6);
 }
 
-/* Glass card that holds the hero video */
 .video-card {
   padding: var(--space-3);
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -548,7 +507,6 @@ mark {
   color: rgba(244, 241, 236, 0.65);
 }
 
-/* Responsive 16:9 video wrapper used across the site */
 .video-frame {
   position: relative;
   aspect-ratio: 16 / 9;
@@ -565,7 +523,6 @@ mark {
   border: 0;
 }
 
-/* Smaller page hero used on inner pages */
 .page-hero {
   position: relative;
   padding: var(--space-9) 0 var(--space-8);
@@ -616,7 +573,6 @@ mark {
 .breadcrumb a { color: inherit; }
 .breadcrumb a:hover { color: var(--accent); }
 
-/* 7. INGREDIENT TICKER (pure CSS marquee) ================================= */
 .ticker {
   overflow: hidden;
   padding-block: var(--space-5);
@@ -658,7 +614,6 @@ mark {
   to { transform: translateX(-50%); }
 }
 
-/* 8. SECTION HEADINGS ===================================================== */
 .section-head {
   display: flex;
   flex-wrap: wrap;
@@ -690,7 +645,6 @@ mark {
 .link-arrow span { transition: transform 0.25s var(--ease); }
 .link-arrow:hover span { transform: translateX(4px); }
 
-/* 9. CARDS ================================================================ */
 .card {
   position: relative;
   display: flex;
@@ -746,7 +700,6 @@ mark {
 .card-body h3 a { color: var(--text); }
 .card-body h3 a:hover { color: var(--accent); }
 
-/* Make the whole card clickable while keeping buttons usable */
 .card-link::before {
   content: "";
   position: absolute;
@@ -771,7 +724,6 @@ mark {
   color: var(--text-faint);
 }
 
-/* Featured dish cards (figure + figcaption) */
 .dish-card figcaption {
   display: flex;
   flex: 1;
@@ -785,7 +737,6 @@ mark {
   color: var(--text-muted);
 }
 
-/* Region cards — tall image with text overlay */
 .region-card {
   position: relative;
   display: flex;
@@ -827,7 +778,6 @@ mark {
 }
 .region-card .eyebrow { color: var(--accent); }
 
-/* News / trend articles */
 .trend-card {
   display: grid;
   grid-template-columns: 9rem 1fr;
@@ -869,7 +819,6 @@ mark {
   gap: var(--space-4);
 }
 
-/* 10. RECIPE FILTER & FAVOURITES ========================================== */
 .filter-bar {
   display: flex;
   flex-wrap: wrap;
@@ -958,10 +907,9 @@ mark {
 }
 .empty-state .empty-icon { font-size: 2.5rem; margin-bottom: var(--space-3); }
 
-/* "❤ Favorite" button */
 .fav-btn {
   position: relative;
-  z-index: 2;                  /* above the clickable card overlay */
+  z-index: 2;
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
@@ -1011,7 +959,6 @@ mark {
   margin-top: var(--space-4);
 }
 
-/* 11. RECIPE DETAIL PAGE ================================================== */
 .recipe-hero { padding-bottom: var(--space-8); }
 .recipe-hero .card-actions { justify-content: flex-start; }
 
@@ -1090,7 +1037,6 @@ mark {
 
 .panel h2 { font-size: 1.6rem; }
 
-/* Ingredient scaler */
 .scaler {
   display: flex;
   align-items: center;
@@ -1173,7 +1119,6 @@ mark {
   color: var(--text-muted);
 }
 
-/* Expandable instructions (<details> + <summary>) */
 .steps details {
   margin-bottom: var(--space-3);
   overflow: hidden;
@@ -1239,7 +1184,6 @@ mark {
   font-size: 0.95rem;
 }
 
-/* Nutrition table */
 .table-wrap {
   overflow-x: auto;
   border: 1px solid var(--border);
@@ -1279,7 +1223,6 @@ tbody tr:hover { background: rgba(240, 182, 90, 0.05); }
 tbody td:last-child { font-weight: 600; text-align: right; }
 thead th:last-child { text-align: right; }
 
-/* Map frame */
 .map-frame {
   overflow: hidden;
   border: 1px solid var(--border);
@@ -1309,7 +1252,6 @@ thead th:last-child { text-align: right; }
   color: var(--text-muted);
 }
 
-/* 12. REGION PAGES ======================================================== */
 .region-intro {
   font-size: 1.15rem;
   line-height: 1.85;
@@ -1389,7 +1331,6 @@ thead th:last-child { text-align: right; }
 .spice h3 { font-size: 1.1rem; margin-bottom: var(--space-2); }
 .spice p { margin: 0; font-size: 0.9rem; color: var(--text-muted); }
 
-/* 13. ABOUT PAGE ========================================================== */
 .mission {
   position: relative;
   padding: var(--space-8) var(--space-7);
@@ -1485,7 +1426,6 @@ thead th:last-child { text-align: right; }
 
 .value-card p { margin: 0; color: var(--text-muted); }
 
-/* 14. CONTACT PAGE & FORMS ================================================ */
 .contact-layout {
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;
@@ -1572,7 +1512,6 @@ thead th:last-child { text-align: right; }
 .field input::placeholder,
 .field textarea::placeholder { color: var(--text-faint); }
 
-/* Focus state — saffron border glow */
 .field input:focus,
 .field select:focus,
 .field textarea:focus {
@@ -1627,7 +1566,6 @@ thead th:last-child { text-align: right; }
   font-weight: 700;
 }
 
-/* 15. FOOTER & NEWSLETTER ================================================= */
 .site-footer {
   padding: var(--space-8) 0 var(--space-5);
   border-top: 1px solid var(--border);
@@ -1712,7 +1650,6 @@ thead th:last-child { text-align: right; }
 
 .footer-bottom p { margin: 0; }
 
-/* Back-to-top button */
 .back-to-top {
   position: fixed;
   right: 1.5rem;
@@ -1730,7 +1667,6 @@ thead th:last-child { text-align: right; }
   transform: none;
 }
 
-/* 16. UTILITIES & ANIMATIONS ============================================== */
 .hidden { display: none !important; }
 
 .visually-hidden {
@@ -1746,7 +1682,6 @@ thead th:last-child { text-align: right; }
 .mt-6 { margin-top: var(--space-6); }
 .center { text-align: center; }
 
-/* Scroll-reveal: only hidden when JS is running (class added by script.js) */
 .js .reveal {
   opacity: 0;
   transform: translateY(2rem);
@@ -1758,7 +1693,6 @@ thead th:last-child { text-align: right; }
   transform: none;
 }
 
-/* Card entrance animation when filter changes */
 .recipe-card.is-entering { animation: fade-up 0.5s var(--ease) both; }
 
 @keyframes fade-up {
@@ -1778,8 +1712,7 @@ thead th:last-child { text-align: right; }
   .js .reveal { opacity: 1; transform: none; }
 }
 
-/* 17. RESPONSIVE BREAKPOINTS ============================================== */
-@media (max-width: 64rem) {           /* ≤ 1024px — tablets */
+@media (max-width: 64rem) {
   .grid-4 { grid-template-columns: repeat(2, 1fr); }
   .hero-grid,
   .split,
@@ -1791,7 +1724,7 @@ thead th:last-child { text-align: right; }
   .hero { min-height: auto; padding-block: var(--space-9); }
 }
 
-@media (max-width: 52rem) {           /* ≤ 832px — mobile navigation */
+@media (max-width: 52rem) {
   .nav-toggle { display: inline-grid; }
 
   .main-nav {
@@ -1823,7 +1756,7 @@ thead th:last-child { text-align: right; }
   .search-field { flex: 1 1 100%; }
 }
 
-@media (max-width: 40rem) {           /* ≤ 640px — phones */
+@media (max-width: 40rem) {
   .section { padding-block: var(--space-8); }
   .grid-2,
   .grid-3,
